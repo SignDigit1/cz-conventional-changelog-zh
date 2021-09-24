@@ -7,6 +7,8 @@ Status:
 [![npm downloads](https://img.shields.io/npm/dm/cz-conventional-changelog-zh.svg?style=flat-square)](http://npm-stat.com/charts.html?package=cz-conventional-changelog-zh&from=2015-08-01)
 [![Build Status](https://img.shields.io/travis/commitizen/cz-conventional-changelog-zh.svg?style=flat-square)](https://travis-ci.org/commitizen/cz-conventional-changelog-zh)
 
+> 基于[cz-conventional-changelog-zh](https://github.com/z649319834/cz-conventional-changelog-zh)，扩展了emoj
+
 > 基于`cz-conventional-changelog`的基础修改的中文版，并扩展了一些日常工作中需要用到的提交类型
 
 Part of the [commitizen](https://github.com/commitizen/cz-cli) family. Prompts for [conventional changelog](https://github.com/conventional-changelog/conventional-changelog-zh) standard.

@@ -1,6 +1,6 @@
 {
-  "name": "cz-conventional-changelog-zh",
-  "version": "0.0.2",
+  "name": "@signdigit1/cz-conventional-changelog-zh",
+  "version": "0.0.1",
   "description": "Commitizen adapter following the conventional-changelog format.",
   "main": "index.js",
   "scripts": {
@@ -12,13 +12,13 @@
   "homepage": "https://github.com/commitizen/cz-conventional-changelog",
   "repository": {
     "type": "git",
-    "url": "https://github.com/z649319834/cz-conventional-changelog-zh.git"
+    "url": "https://github.com/SignDigit1/cz-conventional-changelog-zh.git"
   },
   "engineStrict": true,
   "engines": {
     "node": ">= 10"
   },
-  "author": "z649319834 <649319834@qq.com>",
+  "author": "SignDigit1 <fujunchn@qq.com>",
   "license": "MIT",
   "dependencies": {
     "chalk": "^2.4.1",

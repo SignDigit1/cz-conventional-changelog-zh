@@ -41,10 +41,10 @@ var filterSubject = function(subject, disableSubjectLowerCase) {
 // fine.
 module.exports = function(options) {
   var types = options.types;
-  var length = longest(Object.keys(types)).length + 1;
+  // var length = longest(Object.keys(types)).length + 1;
   var choices = map(types, function(type, key) {
     return {
-      name: (key + ':').padEnd(length) + ' ' + type.description,
+      name: key + ':' + ' ' + type.description,
       value: key
     };
   });
@@ -70,6 +70,12 @@ module.exports = function(options) {
       // You can also opt to use another input
       // collection library if you prefer.
       cz.prompt([
+        {
+          type: 'confirm',
+          name: 'useEmoj',
+          message: '需要添加emoj吗?',
+          default: false
+        },
         {
           type: 'list',
           name: 'type',
@@ -199,10 +205,16 @@ module.exports = function(options) {
         };
 
         // parentheses are only needed when a scope is present
+        var useEmoj = answers.useEmoj;
         var scope = answers.scope ? '(' + answers.scope + ')' : '';
 
         // Hard limit this line in the validate
-        var head = answers.type + scope + ': ' + answers.subject;
+        var head =
+          (useEmoj ? types[answers.type].emoj + ' ' : '') +
+          answers.type +
+          scope +
+          ': ' +
+          answers.subject;
 
         // Wrap these lines at options.maxLineWidth characters
         var body = answers.body ? wrap(answers.body, wrapOptions) : false;

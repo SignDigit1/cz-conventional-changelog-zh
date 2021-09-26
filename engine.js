@@ -11,14 +11,17 @@ var filter = function(array) {
   });
 };
 
-var headerLength = function(answers) {
+var headerLength = function(answers, options) {
   return (
-    answers.type.length + 2 + (answers.scope ? answers.scope.length + 2 : 0)
+    answers.type.length +
+    2 +
+    (answers.useEmoj ? options.types[answers.type].emoj.length + 1 : 0) +
+    (answers.scope ? answers.scope.length + 2 : 0)
   );
 };
 
 var maxSummaryLength = function(options, answers) {
-  return options.maxHeaderWidth - headerLength(answers);
+  return options.maxHeaderWidth - headerLength(answers, options);
 };
 
 var filterSubject = function(subject, disableSubjectLowerCase) {
